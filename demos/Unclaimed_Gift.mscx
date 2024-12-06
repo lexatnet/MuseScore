@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <museScore version="3.01">
   <programVersion>3.0.0</programVersion>
-  <programRevision>3543170</programRevision>
+  <programRevision>cf1f5ce</programRevision>
   <Score>
     <LayerTag id="0" tag="default"></LayerTag>
     <currentLayer>0</currentLayer>
@@ -106,7 +106,6 @@ Licensed under the Creative Commons Attribution 3.0 License</metaTag>
     <metaTag name="movementNumber"></metaTag>
     <metaTag name="movementTitle"></metaTag>
     <metaTag name="platform">Microsoft Windows</metaTag>
-    <metaTag name="poet"></metaTag>
     <metaTag name="source"></metaTag>
     <metaTag name="translator"></metaTag>
     <metaTag name="workNumber"></metaTag>
@@ -165,11 +164,11 @@ Licensed under the Creative Commons Attribution 3.0 License</metaTag>
       <VBox>
         <height>7</height>
         <Text>
-          <style>Title</style>
+          <style>title</style>
           <text>Unclaimed Gift</text>
           </Text>
         <Text>
-          <style>Composer</style>
+          <style>composer</style>
           <text>Marc Sabatella</text>
           </Text>
         <Text>
@@ -224,12 +223,10 @@ Licensed under the Creative Commons Attribution 3.0 License</metaTag>
               <tpc>7</tpc>
               </Note>
             </Chord>
-          <BarLine>
-            <subtype>double</subtype>
-            </BarLine>
           </voice>
         </Measure>
       <Measure>
+        <startRepeat/>
         <voice>
           <Harmony>
             <root>13</root>

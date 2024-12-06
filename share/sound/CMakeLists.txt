@@ -1,42 +1,47 @@
-#=============================================================================
-#  MuseScore
-#  Music Score Editor
+# SPDX-License-Identifier: GPL-3.0-only
+# MuseScore-Studio-CLA-applies
 #
-#  Copyright (C) 2002-2008 by Werner Schweer and others
+# MuseScore Studio
+# Music Composition & Notation
 #
-#  This program is free software; you can redistribute it and/or modify
-#  it under the terms of the GNU General Public License version 2.
+# Copyright (C) 2021 MuseScore Limited
 #
-#  This program is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#  GNU General Public License for more details.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License version 3 as
+# published by the Free Software Foundation.
 #
-#  You should have received a copy of the GNU General Public License
-#  along with this program; if not, write to the Free Software
-#  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#=============================================================================
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-if (NOT EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/MuseScore_General.sf3)
-  install (FILES FluidR3Mono_GM.sf3
-      DESTINATION ${Mscore_SHARE_NAME}${Mscore_INSTALL_NAME}sound
-      RENAME MuseScore_General.sf3
-      )
-else ()
-  install(FILES
-      MuseScore_General.sf3
-      DESTINATION ${Mscore_SHARE_NAME}${Mscore_INSTALL_NAME}sound
-      )
-endif ()
+if (MUE_INSTALL_SOUNDFONT)
 
-if (NOT EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/MuseScore_General-License.md)
-  install (FILES FluidR3Mono_License.md
-      DESTINATION ${Mscore_SHARE_NAME}${Mscore_INSTALL_NAME}sound
-      RENAME MuseScore_General-License.md)
-else ()
-  install(FILES
-      MuseScore_General-License.md
-      DESTINATION ${Mscore_SHARE_NAME}${Mscore_INSTALL_NAME}sound
-      )
-endif ()
+    if (NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/MS Basic.sf3")
+      install (FILES FluidR3Mono_GM.sf3
+          DESTINATION ${Mscore_SHARE_NAME}${Mscore_INSTALL_NAME}sound
+          RENAME "MS Basic.sf3"
+          )
+    else ()
+      install(FILES
+          "MS Basic.sf3"
+          DESTINATION ${Mscore_SHARE_NAME}${Mscore_INSTALL_NAME}sound
+          )
+    endif ()
+
+    if (NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/MS Basic_License.md")
+      install (FILES FluidR3Mono_License.md
+          DESTINATION ${Mscore_SHARE_NAME}${Mscore_INSTALL_NAME}sound
+          RENAME "MS Basic_License.md")
+    else ()
+      install(FILES
+          "MS Basic_License.md"
+          DESTINATION ${Mscore_SHARE_NAME}${Mscore_INSTALL_NAME}sound
+          )
+    endif ()
+
+endif (MUE_INSTALL_SOUNDFONT)
 
